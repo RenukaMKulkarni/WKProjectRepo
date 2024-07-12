@@ -10,6 +10,8 @@ jobs:
 
   job2_PublishVM:
     runs-on: ubuntu-latest
+    needs:
+    -  job1_BuildVM
     steps:
       - name: my-step1 on Publish VM job
         run: echo "First Step under Publish VM Job"
