@@ -1,0 +1,17 @@
+name: RunParallelJobs
+on: 
+  workflow_dispatch:
+jobs:
+  job1_BuildVM:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step1 on Build VM job
+        run: echo "First Step under Build VM Job"
+
+  job2_PublishVM:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step1 on Publish VM job
+        run: echo "First Step under Publish VM Job"
+
+        
